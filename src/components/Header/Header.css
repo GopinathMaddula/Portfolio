@@ -5,13 +5,14 @@
 }
 
 .header-logo {
-  font-size: 48px;
+  font-size: 36px;
   font-weight: bold;
-  font-family: "Inter", sans-serif;
+  font-family: "poppins", sans-serif;
   color: #ffb5e6;
   cursor: pointer;
   transition: all 0.8s ease;
   text-align: start;
+  margin: 0px;
 }
 
 .logo-text {

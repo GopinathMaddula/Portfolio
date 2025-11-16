@@ -1,8 +1,25 @@
+.main-content {
+  background-color: #1b0514;
+  padding: 40px;
+}
+
 .main-text {
   color: #ffffff;
   font-size: 20px;
   text-align: top;
   padding-top: 20px;
+}
+.main-grid {
+  background-image: url("../../assets/images/dot-bg.png");
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+  height: 85vh;
+}
+.main-content-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .profile-image {
   text-align: end;
@@ -27,7 +44,7 @@
 .label-3 {
   font-size: 36px;
   font-weight: bold;
-  color: #842063;
+  color: #ff6bd2;
   text-decoration: none;
 }
 .typewriter-name {
@@ -42,7 +59,7 @@
   width: 3px;
   height: 1em;
   margin-left: 4px;
-  background-color: #842063;
+  background-color: #ff6bd2;
   animation: blink 1s step-start infinite;
   vertical-align: middle;
 }
@@ -57,4 +74,96 @@
   75% {
     opacity: 0;
   }
+}
+.current-working-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10%;
+}
+.current-working-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  border: 2px solid #ffffff;
+  border-radius: 76px;
+  background-color: rgba(0, 0, 0, 0.23);
+  text-align: left;
+  color: #ffffff;
+  font-family: "poppins", sans-serif;
+}
+.cw-heading {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0px;
+}
+.cw-sub {
+  font-size: 24px;
+  color: #ff6bd2;
+  margin: 0px;
+}
+.cw-project {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+.edpedia {
+  font-family: "Righteous", sans-serif;
+  color: #ebff00;
+  font-weight: normal;
+  font-size: 28px;
+}
+.current-location-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ffffff;
+  border-radius: 76px;
+
+  text-align: left;
+  color: #ffffff;
+  font-family: "poppins", sans-serif;
+  height: 209px;
+  width: 376px;
+  padding: 0px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../../assets/images/Screenshot_20251116_181530.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.cw-location {
+  font-size: 36px;
+  color: #ff6bd2;
+  margin: 0px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.work-experience-heading {
+  font-size: 48px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 20px;
+}
+.work-experience-container {
+  background-color: rgba(235, 141, 204, 0.1);
+  border-radius: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.work-edpedia {
+  font-family: "Righteous", sans-serif;
+  color: #ebff00;
+  font-weight: normal;
+  font-size: 48px;
 }

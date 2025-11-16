@@ -24,9 +24,12 @@ const Header: React.FC<HeaderProps> = ({ title = "GM" }) => {
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
         >
-          <span className={`logo-text ${hovered ? "expanded" : ""}`}>
+          <h1
+            className={`logo-text ${hovered ? "expanded" : ""}`}
+            style={{ margin: "0px", fontSize: "40px" }}
+          >
             {hovered ? "GOPINATH M" : title}
-          </span>
+          </h1>
         </Grid>
 
         {/* Navigation section */}
