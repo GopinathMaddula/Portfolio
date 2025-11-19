@@ -8,7 +8,7 @@ import r3 from "../../assets/images/r3.png";
 // @ts-ignore: allow importing image asset without a module declaration (add a *.png d.ts later)
 import downloadIcon from "../../assets/images/download.svg";
 // @ts-ignore: allow importing image asset without a module declaration (add a *.png d.ts later)
-import resumePdf from "../../assets/images/Gopinath Maddula 2025 Resume.pdf";
+import resumePdf from "../../assets/images/Gopinath Resume 2025.pdf";
 import "./Resume.css";
 
 const Resume: React.FC = () => {
