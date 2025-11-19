@@ -8,7 +8,7 @@
   font-size: 28px;
   font-weight: bold;
   font-family: "poppins", sans-serif;
-  color: #ffb5e6;
+  color: #ff6bd2;
   cursor: pointer;
   transition: all 0.8s ease;
   text-align: start;
@@ -22,7 +22,7 @@
 }
 
 .logo-text.expanded {
-  color: #ffb5e6;
+  color: #ff6bd2;
   letter-spacing: 1px;
 }
 

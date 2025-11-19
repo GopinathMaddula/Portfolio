@@ -28,16 +28,13 @@ const Header: React.FC<HeaderProps> = ({ title = "GM" }) => {
         justifyContent="space-between"
       >
         {/* Title */}
-        <Grid
-          size={{ xs: 12, sm: 3 }}
-          className="header-logo"
-          onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)}
-        >
+        <Grid size={{ xs: 12, sm: 3 }} className="header-logo">
           <h1
             className={`logo-text ${hovered ? "expanded" : ""}`}
             style={{ fontSize: "32px" }}
             onClick={() => navigate("/")}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
           >
             {hovered ? "GOPINATH M" : title}
           </h1>
