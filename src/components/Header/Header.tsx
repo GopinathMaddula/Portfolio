@@ -1,5 +1,6 @@
 import Grid from "@mui/material/Grid";
 import React, { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./Header.css";
 
 type HeaderProps = {
@@ -8,6 +9,15 @@ type HeaderProps = {
 
 const Header: React.FC<HeaderProps> = ({ title = "GM" }) => {
   const [hovered, setHovered] = useState(false);
+  const navigate = useNavigate();
+
+  const navItems = [
+    { label: "Home", path: "/" },
+    { label: "About", path: "/about" },
+    // { label: "Contact", path: "/contact" },
+    { label: "Case Studies", path: "/case-studies" },
+    { label: "My Resume", path: "/resume" },
+  ];
 
   return (
     <header className="header">
@@ -17,7 +27,7 @@ const Header: React.FC<HeaderProps> = ({ title = "GM" }) => {
         alignItems="center"
         justifyContent="space-between"
       >
-        {/* Title section */}
+        {/* Title */}
         <Grid
           size={{ xs: 12, sm: 3 }}
           className="header-logo"
@@ -26,13 +36,14 @@ const Header: React.FC<HeaderProps> = ({ title = "GM" }) => {
         >
           <h1
             className={`logo-text ${hovered ? "expanded" : ""}`}
-            style={{ margin: "0px", fontSize: "40px" }}
+            style={{ fontSize: "32px" }}
+            onClick={() => navigate("/")}
           >
             {hovered ? "GOPINATH M" : title}
           </h1>
         </Grid>
 
-        {/* Navigation section */}
+        {/* Navigation */}
         <Grid size={{ xs: 12, sm: 9 }}>
           <Grid
             container
@@ -40,13 +51,18 @@ const Header: React.FC<HeaderProps> = ({ title = "GM" }) => {
             justifyContent="flex-end"
             className="header-nav"
           >
-            {["Home", "About", "Contact", "Case Studies", "My Resume"].map(
-              (item) => (
-                <Grid key={item} className="nav-item">
-                  {item}
-                </Grid>
-              )
-            )}
+            {navItems.map((item) => (
+              <Grid key={item.label} className="nav-item">
+                <NavLink
+                  to={item.path}
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              </Grid>
+            ))}
           </Grid>
         </Grid>
       </Grid>

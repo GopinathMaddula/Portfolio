@@ -1,0 +1,71 @@
+.about-page-main-container {
+  padding: 40px 100px;
+  background-color: #1b0514;
+}
+.about-heading {
+  font-family: "roboto", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 0px;
+}
+.about-description {
+  font-family: "roboto", sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  line-height: 40px;
+}
+.highlighter {
+  color: #ff6bd2;
+}
+.work-experience-head-container {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  gap: 10px;
+  font-family: "roboto", sans-serif;
+}
+.work-experience-about-heading {
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+.edp-head {
+  font-family: "Righteous", sans-serif;
+  color: #ebff00;
+  font-weight: normal;
+  font-size: 32px;
+}
+.duration {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.dur-period {
+  font-weight: normal;
+  color: #b1b1b1;
+  margin-left: 8px;
+}
+.edpedia-description {
+  line-height: 25px;
+  margin-top: 0px;
+}
+.about-work-experience {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.work-experience-all-container {
+  display: flex;
+  gap: 50px;
+}
+.designation {
+  color: #b1b1b1;
+}
+.edpedia-description {
+  margin-top: 10px;
+}
+.c-two-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}

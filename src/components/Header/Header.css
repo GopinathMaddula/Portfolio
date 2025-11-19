@@ -5,7 +5,7 @@
 }
 
 .header-logo {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: bold;
   font-family: "poppins", sans-serif;
   color: #ffb5e6;
@@ -18,6 +18,7 @@
 .logo-text {
   display: inline-block;
   transition: all 0.8s ease;
+  margin: 0px;
 }
 
 .logo-text.expanded {
@@ -41,21 +42,25 @@
 
 .nav-item:hover {
   color: #ffb5e6;
-  font-size: 28px; /* increase font size on hover */
+  font-size: 28px;
   transition: all 0.2s ease;
 }
 
-.nav-item::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: #ffb5e6;
-  transition: width 0.3s ease;
+.nav-link {
+  text-decoration: none;
+  color: #b5b5b5; /* default color */
+  font-size: 24px;
+  padding-bottom: 22px;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
 }
 
-.nav-item:hover::after {
-  width: 100%;
+.nav-link:hover {
+  color: #ffffff;
+}
+
+/* Active (selected) item */
+.nav-link.active {
+  color: #ffffff; /* selected color */
+  border-bottom: 3px solid #ffffff;
 }
