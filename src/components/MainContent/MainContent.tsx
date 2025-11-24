@@ -58,6 +58,8 @@ const MainContent: React.FC = () => {
 
   return (
     <main className="main-content">
+      {/* HERO SECTION */}
+
       <div className="main-grid">
         <div className="main-content-grid">
           <div className="profile-image">
@@ -178,7 +180,7 @@ const MainContent: React.FC = () => {
                   </div>
                   <button
                     className="cs-view-btn"
-                    onClick={() => navigate("/case-studies/kharidh")}
+                    onClick={() => navigate("/case-studies/edpedia")}
                   >
                     VIEW CASE STUDY <img src={fArrow} alt="btn" />
                   </button>

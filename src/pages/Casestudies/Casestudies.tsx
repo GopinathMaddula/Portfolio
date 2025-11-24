@@ -11,12 +11,24 @@ const Casestudies: React.FC = () => {
 
   return (
     <div className="case-studies-page">
-      <h2 className="work-experience-heading" style={{ marginTop: "60px" }}>
-        Case Studies
-      </h2>
+      <div className="case-studies-header">
+        <h1 className="cs-main-heading fade-up" style={{ "--d": "0s" }}>
+          My Case Studies
+        </h1>
+        <p className="cs-tagline fade-up" style={{ "--d": "0.12s" }}>
+          A curated selection of my UX/UI projects.
+        </p>
+        <p className="cs-description fade-up" style={{ "--d": "0.24s" }}>
+          Each case study showcases my end-to-end design approach — from
+          discovering user problems, defining clear goals, ideating solutions,
+          and crafting polished UI experiences. These projects demonstrate how I
+          blend creativity with usability to deliver meaningful digital
+          products.
+        </p>
+      </div>
 
       {/* KHARIDH */}
-      <div className="case-study-main-container">
+      <div className="case-study-main-container ">
         <div className="case-study-container">
           <div className="cs-linear-container">
             <h5 className="cs-name">KHARIDH</h5>
@@ -50,7 +62,7 @@ const Casestudies: React.FC = () => {
       </div>
 
       {/* EDPEDIA */}
-      <div className="case-study-main-container">
+      <div className="case-study-main-container ">
         <div className="case-study-container-edpedia">
           <div className="cs-linear-container">
             <h5 className="cs-name">Edpedia</h5>
@@ -75,7 +87,7 @@ const Casestudies: React.FC = () => {
               </div>
               <button
                 className="cs-view-btn"
-                onClick={() => navigate("/case-studies/kharidh")}
+                onClick={() => navigate("/case-studies/edpedia")}
               >
                 VIEW CASE STUDY <img src={fArrow} alt="btn" />
               </button>

@@ -2,3 +2,88 @@
   padding: 0px 40px;
   background-color: #1b0514;
 }
+.case-studies-header {
+  text-align: center;
+  max-width: 750px;
+  margin: 80px auto 50px auto;
+  padding: 0 20px;
+  line-height: 1.6;
+}
+
+.cs-main-heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.cs-tagline {
+  font-size: 18px;
+  color: #cccccc;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.cs-description {
+  font-size: 16px;
+  color: #969595;
+  margin: 0 auto;
+  /* max-width: 650px; */
+}
+/* ====== Fade-up animation (subtle & accessible) ====== */
+
+.case-studies-header {
+  /* ensure this exists from before */
+  opacity: 1; /* keep normal */
+}
+
+/* initial state for animated elements */
+.fade-up {
+  opacity: 0;
+  transform: translateY(10px) scale(0.995);
+  animation-name: fadeUpIn;
+  animation-duration: 540ms;
+  animation-timing-function: cubic-bezier(0.16, 0.84, 0.36, 1);
+  animation-fill-mode: forwards;
+  animation-delay: var(--d, 0s);
+  will-change: transform, opacity;
+}
+
+/* Keyframes */
+@keyframes fadeUpIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.995);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-3px) scale(1.002);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Slight variety for the title to feel weightier (optional) */
+.cs-main-heading.fade-up {
+  animation-duration: 640ms;
+  letter-spacing: -0.5px;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .fade-up {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+.case-studies-list {
+  display: flex;
+  gap: 30px;
+}
+.cs-width {
+  width: 40%;
+}

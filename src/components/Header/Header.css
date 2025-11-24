@@ -27,7 +27,7 @@
 }
 
 .header-nav {
-  font-size: 24px;
+  font-size: 20px;
   font-family: "Inter", sans-serif;
   display: flex;
   align-items: center;
@@ -42,14 +42,14 @@
 
 .nav-item:hover {
   color: #ffb5e6;
-  font-size: 28px;
+  font-size: 24px;
   transition: all 0.2s ease;
 }
 
 .nav-link {
   text-decoration: none;
   color: #b5b5b5; /* default color */
-  font-size: 24px;
+  font-size: 20px;
   padding-bottom: 22px;
   border-bottom: 3px solid transparent;
   transition: all 0.3s ease;

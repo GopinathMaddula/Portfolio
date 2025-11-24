@@ -48,6 +48,10 @@
   transform: scale(1.2); /* Smooth scaling */
   color: #ffffff;
 }
+.disabled-link {
+  cursor: not-allowed;
+  color: #888888;
+}
 .footer-bottom-section {
   display: flex;
   flex-direction: column;
