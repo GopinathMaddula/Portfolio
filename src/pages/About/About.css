@@ -53,6 +53,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  width: 80%;
 }
 .work-experience-all-container {
   display: flex;
@@ -68,4 +69,53 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
+}
+@media (max-width: 990px) {
+  .work-experience-all-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-work-experience {
+    width: fit-content;
+  }
+}
+@media (max-width: 760px) {
+  .work-experience-all-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-page-main-container {
+    padding: 40px;
+  }
+  .about-heading {
+    font-size: 28px;
+  }
+  .about-description {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .work-experience-all-container {
+    gap: 20px;
+  }
+  .work-experience-about-heading {
+    font-size: 28px;
+  }
+}
+@media (max-width: 560px) {
+  .about-page-main-container {
+    padding: 20px;
+  }
+  .about-heading {
+    font-size: 24px;
+  }
+  .about-description {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .work-experience-all-container {
+    gap: 20px;
+  }
+  .work-experience-about-heading {
+    font-size: 24px;
+  }
 }

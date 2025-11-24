@@ -44,10 +44,7 @@ const About: React.FC = () => {
       <div className="work-experience-head-container">
         <h2 className="work-experience-about-heading">Work Experience</h2>
         <div className="work-experience-all-container">
-          <div
-            className="work-experience-container about-work-experience"
-            style={{ width: "80%" }}
-          >
+          <div className="work-experience-container about-work-experience">
             <span className="edp-head">Edpedia</span>
             <span className="designation">Freelance UX/UI Designer</span>
             <span className="duration">
@@ -69,10 +66,7 @@ const About: React.FC = () => {
               deliver a clean, efficient, and user-friendly module.
             </p>
           </div>
-          <div
-            className="work-experience-container about-work-experience"
-            style={{ flexGrow: 2 }}
-          >
+          <div className="work-experience-container about-work-experience">
             <img src={f1s} alt="f1s" />
             <span className="designation">UX/UI Designer & Developer</span>
             <span className="duration">
