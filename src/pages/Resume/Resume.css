@@ -184,9 +184,9 @@
     width: 30%;
   }
   .expand-btn {
-    top: 10px;
-    right: 10px;
-    padding: 6px;
+    top: 2px;
+    right: 0px;
+    padding: 2px;
   }
   .resume-viewer {
     height: 95vh;
