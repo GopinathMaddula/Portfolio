@@ -1,0 +1,98 @@
+.work-experience-heading {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 20px;
+  text-align: left;
+}
+
+/* Main container */
+.work-experience-container {
+  background-color: rgba(235, 141, 204, 0.1);
+  border-radius: 30px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  gap: 20px; /* spacing between items */
+  flex-wrap: wrap; /* allow wrapping on medium screens */
+}
+
+/* The first Edpedia text */
+.work-edpedia {
+  font-family: "Righteous", sans-serif;
+  color: #ebff00;
+  font-weight: normal;
+  font-size: 190%;
+  white-space: nowrap;
+}
+
+/* Resize images responsively */
+.work-experience-container img {
+  height: clamp(40px, 4vw, 60px);
+  width: auto;
+}
+
+/* ----------- RESPONSIVE ----------- */
+
+/* Mobile phones: stack everything vertically */
+@media (max-width: 760px) {
+  .work-experience-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 30px 20px;
+  }
+
+  .work-edpedia {
+    font-size: 190%;
+  }
+
+  .work-experience-container img {
+    height: 40px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 420px) {
+  .work-edpedia {
+    font-size: 28px;
+  }
+
+  .work-experience-container img {
+    height: 32px;
+  }
+}
+/* Default: vertical line for big screens */
+.responsive-line {
+  width: 1px;
+  height: 100px; /* adjust as needed */
+
+  /* 50% opacity */
+  background-color: rgba(235, 141, 204, 0.1);
+  /* Or with 8-digit hex: background-color: #eb8dcc80; */
+
+  border-radius: 20px;
+  display: block;
+}
+
+/* Mobile & Tablets: horizontal version */
+@media (max-width: 768px) {
+  .responsive-line {
+    width: 100%; /* becomes horizontal */
+    height: 1px;
+
+    background-color: rgba(235, 141, 204, 0.1);
+  }
+}
+
+@media (min-width: 360px) and (max-width: 768px) {
+  .work-experience-heading {
+    font-size: 28px;
+    text-align: center;
+  }
+}

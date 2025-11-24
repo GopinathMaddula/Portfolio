@@ -1,0 +1,283 @@
+/* HeroSection.css - responsive fonts (no :root) */
+
+/* Section wrapper */
+.hero {
+  width: 100%;
+  background-image: url("../../assets/images/dot-bg.png");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  box-sizing: border-box;
+  padding: 28px 16px;
+}
+
+/* inner container */
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* column layout: main then cards */
+  gap: 28px;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+/* Main row: image + text aligned horizontally on wider screens */
+.hero-main {
+  display: flex;
+  flex-direction: column; /* stack image + text */
+  align-items: center; /* center horizontally */
+  justify-content: center; /* center vertically */
+  text-align: center; /* center text */
+  gap: 20px;
+  width: 100%;
+}
+
+/* Profile image container */
+.profile-wrap {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Profile image sizes responsive via clamp */
+.profile-img {
+  display: block;
+  width: clamp(110px, 18vw, 200px);
+  height: clamp(110px, 18vw, 200px);
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Hero text block */
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center; /* horizontally center text */
+  text-align: center; /* center text alignment */
+}
+
+/* Greeting with responsive font size using clamp
+   clamp(min, preferred, max) keeps text readable on all sizes */
+.greeting {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(18px, 2.2vw, 24px);
+  margin: 0;
+  color: #ffffff;
+  line-height: 1.05;
+  word-break: keep-all;
+}
+
+/* Typewriter name responsive */
+.typewriter-name {
+  display: inline-block;
+  white-space: nowrap;
+  margin-left: 6px;
+  font-weight: 700;
+  color: #ff6bd2;
+  font-size: clamp(20px, 3.2vw, 24px);
+}
+
+.name-text {
+  display: inline-block;
+}
+
+/* blinking cursor */
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  margin-left: 6px;
+  background-color: #ff6bd2;
+  animation: blink 1s step-start infinite;
+  vertical-align: middle;
+}
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+/* Taglines with responsive sizes */
+.hero-taglines {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* center across rows */
+  gap: 8px 12px;
+  margin-top: 6px;
+}
+
+/* small tagline */
+.tagline {
+  font-family: "Inter", sans-serif;
+  color: #b5b5b5;
+  text-decoration: underline;
+  text-decoration-color: rgba(235, 139, 204, 0.15);
+  font-size: clamp(13px, 1.6vw, 18px);
+}
+
+/* larger tagline (main phrases) */
+.tagline.big {
+  font-size: clamp(20px, 4.2vw, 24px);
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  line-height: 1;
+}
+
+/* accent color on the last tagline */
+.tagline.accent {
+  color: #ff6bd2;
+}
+
+/* Cards container - sits under the main hero */
+.hero-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* two-up on larger screens */
+  gap: 18px;
+  align-items: stretch;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Card common style */
+.cw {
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 18px;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35));
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+
+/* larger card padding for project */
+.cw-project {
+  padding: 20px;
+  border-radius: 20px;
+}
+
+/* location card background image kept subtle */
+.cw-location {
+  padding: 18px;
+  border-radius: 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../assets/images/Screenshot_20251116_181530.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Card typography responsive */
+.cw-heading {
+  font-size: clamp(16px, 1.9vw, 22px);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  font-weight: 700;
+}
+
+.cw-sub {
+  font-size: clamp(14px, 1.6vw, 18px);
+  color: #ff6bd2;
+  margin: 0;
+  font-weight: 600;
+}
+
+.cw-project-text {
+  font-size: clamp(13px, 1.4vw, 16px);
+  font-weight: 700;
+  margin: 6px 0 0 0;
+}
+
+.edpedia {
+  font-family: "Righteous", sans-serif;
+  color: #ebff00;
+  font-weight: normal;
+  font-size: clamp(14px, 1.6vw, 20px);
+}
+
+.cw-location-text {
+  font-size: clamp(16px, 2.2vw, 28px);
+  color: #ff6bd2;
+  margin: 6px 0 0 0;
+  font-weight: 700;
+}
+
+/* --- Responsive breakpoints --- */
+
+/* Narrow screens: stack everything vertically; cards one-under-another */
+@media (max-width: 760px) {
+  .hero-main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .hero-text {
+    align-items: center;
+  }
+
+  .hero-cards {
+    grid-template-columns: 1fr; /* stack cards vertically */
+    gap: 12px;
+  }
+
+  .profile-img {
+    width: clamp(110px, 24vw, 160px);
+    height: clamp(110px, 24vw, 160px);
+  }
+
+  .hero-inner {
+    gap: 18px;
+    padding: 8px 12px;
+  }
+}
+
+/* Very small phones: slightly reduce spacing & font sizes */
+@media (max-width: 420px) {
+  .hero {
+    padding: 18px 12px;
+  }
+
+  .hero-taglines {
+    gap: 6px 8px;
+  }
+
+  .tagline.big {
+    font-size: clamp(18px, 6.5vw, 28px);
+  }
+
+  .cw {
+    padding: 14px;
+  }
+}
+
+/* Wide screens: increase spacing a bit */
+@media (min-width: 1200px) {
+  .hero-inner {
+    gap: 36px;
+  }
+
+  .hero-main {
+    gap: 28px;
+  }
+
+  .hero-cards {
+    gap: 22px;
+  }
+}

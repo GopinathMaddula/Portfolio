@@ -1,66 +1,204 @@
-.header-grid {
-  background-color: #280d20;
-  color: white;
-  padding: 20px;
+:root {
+  --bg: #280d20;
+  --accent: #ff6bd2;
+  --muted: #b5b5b5;
+  --panel: #2a101f;
+  --glass: rgba(255, 255, 255, 0.04);
 }
 
+/* Header wrapper */
+.header {
+  background: var(--bg);
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  /* keep on top but not fixed by default */
+  z-index: 1000;
+}
+
+/* inner layout */
+.header-inner {
+  /* max-width: 1100px; */
+  margin: 0 auto;
+  padding: 14px 20px 0px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+/* Logo */
 .header-logo {
-  font-size: 28px;
-  font-weight: bold;
-  font-family: "poppins", sans-serif;
-  color: #ff6bd2;
+  display: flex;
+  align-items: center;
   cursor: pointer;
-  transition: all 0.8s ease;
-  text-align: start;
-  margin: 0px;
+  user-select: none;
 }
 
 .logo-text {
-  display: inline-block;
-  transition: all 0.8s ease;
-  margin: 0px;
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  margin: 0px 0px 10px 0px;
+  color: var(--accent);
+  transition: all 0.25s ease;
 }
 
 .logo-text.expanded {
-  color: #ff6bd2;
   letter-spacing: 1px;
+  transform: translateY(-2px);
 }
 
-.header-nav {
-  font-size: 20px;
-  font-family: "Inter", sans-serif;
+/* Desktop nav - visible on larger screens */
+.nav {
   display: flex;
+  gap: 18px;
   align-items: center;
-}
-
-.nav-item {
-  color: #ffffffcc;
-  cursor: pointer;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.nav-item:hover {
-  color: #ffb5e6;
-  font-size: 24px;
-  transition: all 0.2s ease;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
 }
 
 .nav-link {
+  color: var(--muted);
   text-decoration: none;
-  color: #b5b5b5; /* default color */
-  font-size: 20px;
-  padding-bottom: 22px;
+  padding: 8px 6px 16px 6px;
   border-bottom: 3px solid transparent;
-  transition: all 0.3s ease;
+  transition: all 0.15s ease;
 }
 
 .nav-link:hover {
-  color: #ffffff;
+  color: #fff;
+  transform: translateY(-2px);
 }
 
-/* Active (selected) item */
 .nav-link.active {
-  color: #ffffff; /* selected color */
-  border-bottom: 3px solid #ffffff;
+  color: #fff;
+  border-bottom: 3px solid #fff;
+}
+
+/* Hamburger (mobile) */
+.hamburger {
+  display: none; /* shown on small screens via media query */
+  background: transparent;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* Drawer and backdrop */
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: flex-end; /* drawer slides from right */
+  z-index: 1200;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.drawer {
+  width: 280px;
+  max-width: 85%;
+  height: 100%;
+  background: var(--panel);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  padding: 8px 12px;
+  transform: translateX(
+    0
+  ); /* initial open state because we render only when open */
+}
+
+/* Drawer header */
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  margin-bottom: 8px;
+}
+
+.drawer-title {
+  font-family: "Poppins", sans-serif;
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.drawer-close {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  padding: 6px;
+  cursor: pointer;
+}
+
+/* Drawer nav links */
+.drawer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 6px;
+}
+
+.drawer-link {
+  color: #e6dfe3;
+  text-decoration: none;
+  padding: 12px 10px;
+  border-radius: 8px;
+  font-size: 17px;
+  transition: background 0.12s ease, transform 0.12s ease;
+}
+
+.drawer-link:focus,
+.drawer-link:hover {
+  background: var(--glass);
+  transform: translateX(-4px);
+  outline: none;
+}
+
+/* Responsive behavior - mobile first */
+@media (max-width: 760px) {
+  .desktop-nav {
+    display: none;
+  }
+  .hamburger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo-text {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 761px) {
+  .hamburger {
+    display: none;
+  }
+  .desktop-nav {
+    display: flex;
+  }
+}
+
+/* Optional: sticky header variant */
+.header.sticky {
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* small adjustments for very small screens */
+@media (max-width: 380px) {
+  .drawer {
+    width: 220px;
+  }
+  .logo-text {
+    font-size: 22px;
+  }
+  .nav-link {
+    font-size: 16px;
+  }
 }

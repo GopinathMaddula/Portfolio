@@ -1,0 +1,146 @@
+.case-study-main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.case-study-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../../assets/images/Project\ Title.png");
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+  border: 2px solid #ffffff;
+  border-radius: 48px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.case-study-container-edpedia {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../../assets/images/Library\ Managment\ -\ books.png");
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+  border: 2px solid #ffffff;
+  border-radius: 48px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.cs-linear-container {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(9, 0, 6, 0.93) 55%
+  );
+  border-radius: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px 60px;
+  height: 460px;
+}
+.cs-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #808080;
+  margin: 0px;
+}
+.cs-desc {
+  font-size: 32px;
+  color: #ffffff;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.cs-btn-main-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.cs-position-main-container {
+  display: flex;
+  gap: 40px;
+}
+.cs-position-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #d1d1d1;
+}
+.position {
+  font-size: 20px;
+  margin: 0px;
+  font-weight: bold;
+}
+.pos-name {
+  font-size: 16px;
+  margin: 0px;
+}
+.cs-view-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  background-color: #ff6bd2;
+  color: #ffffff;
+  border-radius: 4px;
+  height: 44px;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 0px 16px;
+  cursor: pointer;
+}
+.cs-view-btn:hover {
+  background-color: #f83bbf;
+  scale: 1.05;
+  transition: all 0.3s ease;
+}
+@media (max-width: 760px) {
+  .cs-btn-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 20px;
+  }
+  .cs-desc {
+    font-size: 28px;
+  }
+  .cs-position-main-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 580px) {
+  .cs-desc {
+    font-size: 20px;
+  }
+  .position {
+    font-size: 16px;
+  }
+  .cs-view-btn {
+    font-size: 12px;
+  }
+  .cs-view-btn {
+    padding: 0px;
+  }
+  .pos-name {
+    font-size: 14px;
+  }
+  .cs-linear-container {
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(9, 0, 6, 0.93) 55%
+    );
+    height: fit-content;
+    padding: 30px;
+  }
+  .case-study-container-edpedia {
+    height: fit-content;
+  }
+  .case-study-container {
+    height: fit-content;
+  }
+  .cs-btn-main-container {
+    margin-bottom: 0px;
+  }
+}
