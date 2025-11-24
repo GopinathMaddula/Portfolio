@@ -90,7 +90,7 @@ const Resume: React.FC = () => {
         </div>
 
         <div className="resume-download-btn-container">
-          <button className="cs-view-btn" onClick={handleDownload}>
+          <button className="resume-view-btn" onClick={handleDownload}>
             DOWNLOAD MY RESUME <img src={downloadIcon} alt="download" />
           </button>
         </div>

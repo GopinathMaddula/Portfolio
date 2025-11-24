@@ -82,9 +82,10 @@
   justify-content: center;
   margin-top: 20px;
 }
-.cs-view-btn {
+.resume-view-btn {
   background: linear-gradient(90deg, #ff6bd2 0%, #ff7a84 100%);
-  color: #111;
+  /* color: #111; */
+  color: #fff;
   border: none;
   padding: 12px 18px;
   border-radius: 12px;
@@ -94,9 +95,12 @@
   align-items: center;
   cursor: pointer;
 }
-.cs-view-btn img {
+.resume-view-btn img {
   width: 18px;
   height: 18px;
+}
+.resume-view-btn:hover {
+  background: linear-gradient(90deg, #ff7a84 0%, #ff6bd2 100%);
 }
 
 /* viewer modal/backdrop */
