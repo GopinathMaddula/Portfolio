@@ -19,7 +19,10 @@ const MainContent: React.FC = () => {
       {/* CASE STUDIES */}
 
       <div>
-        <h2 className="work-experience-heading" style={{ marginTop: "60px" }}>
+        <h2
+          className="work-experience-heading"
+          // style={{ marginTop: "60px" }}
+        >
           CASE STUDIES
         </h2>
 

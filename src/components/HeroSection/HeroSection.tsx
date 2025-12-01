@@ -6,13 +6,21 @@ import profile from "../../assets/images/Group 1950.png";
 const names = [
   "Gopinath", // English
   "గోపీనాథ్", // Telugu
+  "Gopinath", // English
   "गोपीनाथ", // Hindi
+  "Gopinath", // English
   "கோபிநாத்", // Tamil
+  "Gopinath", // English
   "ಗೋಪಿನಾಥ್", // Kannada
+  "Gopinath", // English
   "ഗോപിനാഥ്", // Malayalam
+  "Gopinath", // English
   "Гопинатх", // Russian
+  "Gopinath", // English
   "جوبيناث", // Arabic
+  "Gopinath", // English
   "戈皮纳特", // Chinese
+  "Gopinath", // English
   "ゴピナート", // Japanese
 ];
 
@@ -54,7 +62,7 @@ const HeroSection: React.FC = () => {
 
           <div className="hero-text">
             <h1 className="greeting">
-              Hello! I'm{" "}
+              <span className="hello-text">Hello! I'm</span>
               <span className="typewriter-name" aria-live="polite">
                 <span className="name-text">{displayedText}</span>
                 <span className="cursor" aria-hidden="true" />

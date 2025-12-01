@@ -38,13 +38,13 @@
   height: 460px;
 }
 .cs-name {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   color: #808080;
   margin: 0px;
 }
 .cs-desc {
-  font-size: 32px;
+  font-size: 28px;
   color: #ffffff;
   margin-top: 10px;
   font-weight: bold;
@@ -65,13 +65,14 @@
   color: #d1d1d1;
 }
 .position {
-  font-size: 20px;
+  font-size: 18px;
   margin: 0px;
   font-weight: bold;
 }
 .pos-name {
-  font-size: 16px;
+  font-size: 18px;
   margin: 0px;
+  color: #ffffff;
 }
 .cs-view-btn {
   display: flex;
